@@ -22,12 +22,11 @@ public class Main {
         Integer maxPrice = 0;
         String searchWord = "Высший";
         for (int i = 0; i < itemsList.size(); i++) {
-            if ((itemsList.get(i).getName().indexOf(searchWord) == 0) &&
+            if ((itemsList.get(i).getName().indexOf(searchWord) != -1) &&
                 ((itemsList.get(i).getVariety() == 1) || (itemsList.get(i).getVariety() == 2)) &&
                     (itemsList.get(i).getPrice() > maxPrice)){
                 maxPrice = itemsList.get(i).getPrice();
             }
-            
         }
         System.out.println(maxPrice);
     }
